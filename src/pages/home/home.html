@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <img src="../../assets/imgs/espn-logo.png" alt="ESPN" style="width: 100px; height: auto; text-align: center;">
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card *ngFor="let e of dados">
+    <h2><b>{{e.title}}</b></h2>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/espn.png">
+      </ion-avatar>
+      <p>{{e.publishedAt}}</p>
+    </ion-item>
+
+    <a href="{{e.url}}">
+      <img src="{{e.urlToImage}}">
+    </a>
+
+    <ion-card-content>
+      <p>{{e.description}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
